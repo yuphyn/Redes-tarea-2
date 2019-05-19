@@ -32,20 +32,18 @@ public class Cliente {
                     break;
                 }
                 else if(tosend.toLowerCase().contains("put".toLowerCase())){
-                    String[] file_name = tosend.split(" ",2);
-                    File file = new File("/home/cesar/Escritorio/"+file_name[1]);
                     DataOutputStream out = new DataOutputStream(s.getOutputStream());
-                    // Obtenemos el tamaño del archivo
-                    int tamanoArchivo = ( int )file.length();
-                    // Enviamos el tamaño del archivo
-                    dos.writeInt( tamanoArchivo );
-                    byte[] bytes = new byte[tamanoArchivo];
-                    InputStream in = new FileInputStream(file);
-                    int count;
-                    while ((count = in.read(bytes)) > 0) {
-                        out.write(bytes, 0, count);
-                    }
-                    System.out.println("archivo enviado por el cliente");
+                    DataInputStream in= new DataInputStream(s.getInputStream());
+                    String[] file_name = tosend.split(" ",2);
+                    File file = new File("./src/cliente/"+file_name[1]);
+                    java.io.FileInputStream fis= new java.io.FileInputStream(file);
+                    byte[] buff= new byte[(int)file.length()];
+                    fis.read(buff);
+                    // codificar base64
+                    String base64= new sun.misc.BASE64Encoder().encode(buff);
+                    out.writeUTF(base64);
+                    System.out.println(in.readUTF());
+
                 }
                 else if(tosend.toLowerCase().contains("get".toLowerCase())){
                     // Creamos flujo de entrada para leer los datos que envia el cliente

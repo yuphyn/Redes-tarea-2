@@ -1,6 +1,4 @@
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.file.DirectoryStream;
@@ -98,6 +96,27 @@ class Server2Handler extends Thread
                             }
                         }
                         out.writeUTF(names.toString());
+                        break;
+
+                    case "put":
+                        FileWriter fichero = null;
+                        PrintWriter pw = null;
+                        try{
+                            fichero = new FileWriter("./src/maquina virtual 2/"+comando[1]+".txt");
+                            pw = new PrintWriter(fichero);
+                            pw.println(in.readUTF());
+
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        } finally {
+                            try {
+                                if (null != fichero)
+                                    fichero.close();
+                            } catch (Exception e2) {
+                                e2.printStackTrace();
+                            }
+                        }
+                        out.writeUTF("Maquina 2 recibe archivo con exito");
                         break;
                     default:
                         out.writeUTF("Input inválido");

@@ -50,7 +50,7 @@ public class Servidor {
                 System.out.println("Assigning new thread for this client");
 
                 // create a new thread object
-                Thread t = new ClientHandler(s, in, out, dis,dis2, dos, dos2);
+                Thread t = new ClientHandler(s, in, out, dis,dis2, dos, dos2,m,m2);
 
                 // Invoking the start() method
                 t.start();
@@ -75,10 +75,12 @@ class ClientHandler extends Thread
     final DataInputStream dis2;
     final DataOutputStream dos;
     final DataOutputStream dos2;
+    final Socket m;
+    final Socket m2;
 
 
     // Constructor
-    public ClientHandler(Socket s, DataInputStream in, DataOutputStream out, DataInputStream dis,DataInputStream dis2,DataOutputStream dos,DataOutputStream dos2)
+    public ClientHandler(Socket s, DataInputStream in, DataOutputStream out, DataInputStream dis,DataInputStream dis2,DataOutputStream dos,DataOutputStream dos2, Socket m,Socket m2)
     {
         this.s = s;
         this.in = in;
@@ -87,6 +89,8 @@ class ClientHandler extends Thread
         this.dis2 =dis2;
         this.dos= dos;
         this.dos2= dos2;
+        this.m = m;
+        this.m2 = m2;
     }
 
     @Override
@@ -117,11 +121,12 @@ class ClientHandler extends Thread
                     break;
                 }
 
-
                 switch (comando[0]) {
                     case "ls":
                         System.out.println("Ejecutando ls");
                         out.writeUTF(dis.readUTF()+dis2.readUTF());
+
+
                         break;
                     case "get":
                         DataOutputStream dos = new DataOutputStream(s.getOutputStream());
@@ -140,22 +145,28 @@ class ClientHandler extends Thread
                         System.out.println("archivo "+ comando[1] +" enviado por el servidor");
                         break;
                     case "put":
-                        // Creamos flujo de entrada para leer los datos que envia el cliente
-                        DataInputStream dis = new DataInputStream( s.getInputStream());
-                        OutputStream o = new FileOutputStream(comando[1]);
-                        // Obtenemos el tamaño del archivo
-                        int tam = dis.readInt();
-                        byte[] bytes = new byte[tam];
-                        System.out.println("empezando a copiar");
-                        // Obtenemos el archivo mediante la lectura de bytes enviados
-                        for( int i = 0; i < bytes.length; i++ )
-                        {
-                            bytes[i] = ( byte )in.read( );
+                        System.out.println("Ejecutando put");
+                        DataOutputStream dosm1 = new DataOutputStream(m.getOutputStream());
+                        DataInputStream dism1 = new DataInputStream(m.getInputStream());
+                        dosm1.writeUTF(in.readUTF());
+                        dism1.readUTF();
+                        FileWriter fichero = null;
+                        PrintWriter pw = null;
+                        try{
+                            fichero = new FileWriter("./src/servidor/log.txt");
+                            pw = new PrintWriter(fichero);
+                            pw.println(comando[1] + "fue enviado a maquina 1");
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        } finally {
+                            try {
+                                if (null != fichero)
+                                    fichero.close();
+                            } catch (Exception e2) {
+                                e2.printStackTrace();
+                            }
                         }
-                        // Escribimos el archivo
-                        o.write(bytes);
-                        System.out.println("Archivo "+comando[1] + "recibido por servidor");
-                        out.writeUTF("Archivo "+comando[1]+" copiado en el servidor\n");
+                        out.writeUTF("servidor envio archivo a maquinas virtuales");
                         break;
                     case "delete":
                         String path_to_remove = "./"+comando[1];
@@ -191,3 +202,4 @@ class ClientHandler extends Thread
     }
 
 }
+
