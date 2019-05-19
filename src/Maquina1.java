@@ -11,13 +11,12 @@ public class Maquina1 {
         // server is listening on port 5057
         ServerSocket ss = new ServerSocket(5057);
         // running infinite loop for getting
-        // server request
         while (true){
             Socket s = null;
             try {
                 // socket object to receive incoming client requests
                 s = ss.accept();
-                System.out.println("Se conectó el servidor : " + s);
+                System.out.println("El servidor  se conecto con exito: " + s);
 
                 // obtaining input and out streams
                 DataInputStream in = new DataInputStream(s.getInputStream());
@@ -64,7 +63,7 @@ class ServerHandler extends Thread
             try {
 
                 // Ask user what he wants
-                out.writeUTF("Maquina 1 Conectada, ingrese instrucción:");
+                out.writeUTF("Maquina 1 Conectada esperando instrucción:");
 
                 // receive the answer from client
                 received = in.readUTF();
@@ -79,6 +78,22 @@ class ServerHandler extends Thread
                     this.s.close();
                     System.out.println("Conección cerrada");
                     break;
+                }
+                switch (comando[0]) {
+                    case "ls":
+                        Path dir = Paths.get("./src/maquina virtual 1");
+                        System.out.println("entre a ls");
+                        StringBuilder names = new StringBuilder();
+                        try (DirectoryStream<Path> stream = Files.newDirectoryStream(dir)) {
+                            for (Path file : stream) {
+                                names.append(file+"\n");
+                            }
+                        }
+                        out.writeUTF(names.toString());
+                        break;
+                    default:
+                        out.writeUTF("Input inválido");
+                        break;
                 }
             }catch (IOException e) {
                 e.printStackTrace();

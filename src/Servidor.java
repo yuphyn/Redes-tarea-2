@@ -41,23 +41,7 @@ public class Servidor {
                 DataInputStream dis2 = new DataInputStream(m2.getInputStream());
                 DataOutputStream dos2 = new DataOutputStream(m2.getOutputStream());
 
-                while (true)
-                {
-                    System.out.println(dis.readUTF());
-                    System.out.println(dis2.readUTF());
-                    String tosend = scn.nextLine();
-                    dos.writeUTF(tosend);
 
-                    // If client sends exit,close this connection
-                    // and then break from the while loop
-                    if(tosend.equals("Exit"))
-                    {
-                        System.out.println("Closing this connection : " + s);
-                        s.close();
-                        System.out.println("Connection closed");
-                        break;
-                    }
-                }
 
                 // obtaining input and out streams
                 DataInputStream in = new DataInputStream(s.getInputStream());
@@ -66,10 +50,11 @@ public class Servidor {
                 System.out.println("Assigning new thread for this client");
 
                 // create a new thread object
-                Thread t = new ClientHandler(s, in, out);
+                Thread t = new ClientHandler(s, in, out, dis,dis2, dos, dos2);
 
                 // Invoking the start() method
                 t.start();
+
 
             }
             catch (Exception e){
@@ -86,14 +71,22 @@ class ClientHandler extends Thread
     final DataInputStream in;
     final DataOutputStream out;
     final Socket s;
+    final DataInputStream dis;
+    final DataInputStream dis2;
+    final DataOutputStream dos;
+    final DataOutputStream dos2;
 
 
     // Constructor
-    public ClientHandler(Socket s, DataInputStream in, DataOutputStream out)
+    public ClientHandler(Socket s, DataInputStream in, DataOutputStream out, DataInputStream dis,DataInputStream dis2,DataOutputStream dos,DataOutputStream dos2)
     {
         this.s = s;
         this.in = in;
         this.out = out;
+        this.dis= dis;
+        this.dis2 =dis2;
+        this.dos= dos;
+        this.dos2= dos2;
     }
 
     @Override
@@ -106,10 +99,13 @@ class ClientHandler extends Thread
 
                 // Ask user what he wants
                 out.writeUTF("Server Conectado, ingrese instrucción:");
+                System.out.println(dis.readUTF());
+                System.out.println(dis2.readUTF());
 
                 // receive the answer from client
                 received = in.readUTF();
-
+                dos.writeUTF(received);
+                dos2.writeUTF(received);
                 String[] comando= received.split(" ",2);
 
                 if(comando[0].equals("Exit"))
@@ -124,15 +120,8 @@ class ClientHandler extends Thread
 
                 switch (comando[0]) {
                     case "ls":
-                        Path dir = Paths.get("./");
-                        System.out.println("entre a ls");
-                        StringBuilder names = new StringBuilder();
-                        try (DirectoryStream<Path> stream = Files.newDirectoryStream(dir)) {
-                            for (Path file : stream) {
-                                names.append(file+"\n");
-                            }
-                        }
-                        out.writeUTF(names.toString());
+                        System.out.println("Ejecutando ls");
+                        out.writeUTF(dis.readUTF()+dis2.readUTF());
                         break;
                     case "get":
                         DataOutputStream dos = new DataOutputStream(s.getOutputStream());
