@@ -90,16 +90,18 @@ class ServerHandler extends Thread
                             }
                         }
                         out.writeUTF(names.toString());
+                        System.out.println(in.readUTF());
                         break;
                     case "put":
-                        DataInputStream in2= new DataInputStream(s.getInputStream());
-                        DataOutputStream out2= new DataOutputStream(s.getOutputStream());
+                        //DataInputStream in2= new DataInputStream(s.getInputStream());
+                        //DataOutputStream out2= new DataOutputStream(s.getOutputStream());
+                        out.writeUTF("Maquina 1 recibe archivo con exito");
                         FileWriter fichero = null;
                         PrintWriter pw = null;
                         try{
                             fichero = new FileWriter("./src/maquina virtual 1/"+comando[1]+".txt");
                             pw = new PrintWriter(fichero);
-                            pw.println(in2.readUTF());
+                            pw.println(in.readUTF());
 
                         } catch (Exception e) {
                             e.printStackTrace();
@@ -111,7 +113,7 @@ class ServerHandler extends Thread
                                 e2.printStackTrace();
                             }
                         }
-                        out2.writeUTF("Maquina 1 recibe archivo con exito");
+
                         break;
 
                     default:

@@ -100,34 +100,32 @@ class ClientHandler extends Thread
         while (true)
         {
             try {
-
-                // Ask user what he wants
-                out.writeUTF("Server Conectado, ingrese instrucción:");
+                out.writeUTF("Server Conectado, ingrese instrucción:"); // mensaje al cliente
+                //mensaje maquina virtuales
                 System.out.println(dis.readUTF());
                 System.out.println(dis2.readUTF());
-
                 // receive the answer from client
                 received = in.readUTF();
-                dos.writeUTF(received);
-                dos2.writeUTF(received);
+                dos.writeUTF(received); //manda mensaje a maquina virtual 1
+                dos2.writeUTF(received); //manda mensaje a maquina virtual 2
                 String[] comando= received.split(" ",2);
 
-                if(comando[0].equals("Exit"))
-                {
+                if(comando[0].equals("Exit")){
                     System.out.println("Cliente " + this.s + " ingresa exit...");
                     System.out.println("Cerrando la conección.");
                     this.s.close();
                     System.out.println("Conección cerrada");
                     break;
                 }
-
                 switch (comando[0]) {
                     case "ls":
                         System.out.println("Ejecutando ls");
-                        out.writeUTF(dis.readUTF()+dis2.readUTF());
-
-
+                        out.writeUTF(dis.readUTF()+dis2.readUTF()); //leer informacion maquinas virtuales y envia a servidor
+                        // manda mensaje a maquinas virtuales.
+                        dos.writeUTF("Información recibida");
+                        dos2.writeUTF("Información recibida");
                         break;
+                        /*
                     case "get":
                         DataOutputStream dos = new DataOutputStream(s.getOutputStream());
                         File file2 = new File(comando[1]);
@@ -143,13 +141,14 @@ class ClientHandler extends Thread
                             o2.write(bytes2, 0, count2);
                         }
                         System.out.println("archivo "+ comando[1] +" enviado por el servidor");
-                        break;
+                        break; */
                     case "put":
                         System.out.println("Ejecutando put");
-                        DataOutputStream dosm1 = new DataOutputStream(m.getOutputStream());
-                        DataInputStream dism1 = new DataInputStream(m.getInputStream());
-                        dosm1.writeUTF(in.readUTF());
-                        dism1.readUTF();
+                        //DataOutputStream dosm1 = new DataOutputStream(m.getOutputStream());
+                        //DataInputStream dism1 = new DataInputStream(m.getInputStream());
+                        dis.readUTF();
+                        dos.writeUTF(in.readUTF());
+
                         FileWriter fichero = null;
                         PrintWriter pw = null;
                         try{

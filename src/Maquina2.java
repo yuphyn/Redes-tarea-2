@@ -96,6 +96,7 @@ class Server2Handler extends Thread
                             }
                         }
                         out.writeUTF(names.toString());
+                        System.out.println(in.readUTF());
                         break;
 
                     case "put":

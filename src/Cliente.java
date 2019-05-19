@@ -3,7 +3,7 @@ import java.net.*;
 import java.util.Scanner;
 
 public class Cliente {
-    public static void main(String[] args) throws IOException
+    public static void main(String[] args)
     {
         try
         {
@@ -21,7 +21,6 @@ public class Cliente {
                 System.out.println(dis.readUTF());
                 String tosend = scn.nextLine();
                 dos.writeUTF(tosend);
-
                 // If client sends exit,close this connection
                 // and then break from the while loop
                 if(tosend.equals("Exit"))
@@ -32,19 +31,19 @@ public class Cliente {
                     break;
                 }
                 else if(tosend.toLowerCase().contains("put".toLowerCase())){
-                    DataOutputStream out = new DataOutputStream(s.getOutputStream());
-                    DataInputStream in= new DataInputStream(s.getInputStream());
                     String[] file_name = tosend.split(" ",2);
+                    // leer archivo
                     File file = new File("./src/cliente/"+file_name[1]);
                     java.io.FileInputStream fis= new java.io.FileInputStream(file);
                     byte[] buff= new byte[(int)file.length()];
                     fis.read(buff);
                     // codificar base64
                     String base64= new sun.misc.BASE64Encoder().encode(buff);
-                    out.writeUTF(base64);
-                    System.out.println(in.readUTF());
+                    dos.writeUTF(base64);
+                    System.out.println(dis.readUTF());
 
                 }
+                /*
                 else if(tosend.toLowerCase().contains("get".toLowerCase())){
                     // Creamos flujo de entrada para leer los datos que envia el cliente
                     DataInputStream di = new DataInputStream( s.getInputStream());
@@ -63,7 +62,7 @@ public class Cliente {
                     o.write(bytes2);
                     System.out.println("Archivo recibido por cliente");
                     System.out.println("Archivo "+filename[1]+" copiado en el cliente\n");
-                }
+                } */
 
 
                 // printing date or time as requested by client
