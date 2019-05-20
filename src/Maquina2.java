@@ -101,21 +101,27 @@ class Server2Handler extends Thread
                         FileWriter fichero = null;
                         PrintWriter pw = null;
                         out.writeUTF("Maquina 2 recibe archivo con exito");
-                        try{
-                            int id = in.readInt();
-                            fichero = new FileWriter("./src/maquina virtual 2/"+comando[1]+ " parte "+id+".txt");
-                            pw = new PrintWriter(fichero);
-                            pw.println(in.readUTF());
-                            System.out.println("Maquina escribe el archivo "+ comando [1] + "parte "+ "id");
-
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        } finally {
+                        while (true) {
                             try {
-                                if (null != fichero)
-                                    fichero.close();
-                            } catch (Exception e2) {
-                                e2.printStackTrace();
+                                if(in.readUTF().equals("termino")){
+                                    break;
+                                }
+                                int id = in.readInt();
+                                fichero = new FileWriter("./src/maquina virtual 2/" + comando[1] + " parte " + id + ".txt");
+                                pw = new PrintWriter(fichero);
+                                pw.println(in.readUTF());
+                                System.out.println("Maquina escribe el archivo " + comando[1] + "parte " + "id");
+
+
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            } finally {
+                                try {
+                                    if (null != fichero)
+                                        fichero.close();
+                                } catch (Exception e2) {
+                                    e2.printStackTrace();
+                                }
                             }
                         }
                         break;

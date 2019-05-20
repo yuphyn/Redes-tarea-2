@@ -93,29 +93,33 @@ class ServerHandler extends Thread
                         System.out.println(in.readUTF());
                         break;
                     case "put":
-                        //DataInputStream in2= new DataInputStream(s.getInputStream());
-                        //DataOutputStream out2= new DataOutputStream(s.getOutputStream());
                         out.writeUTF("Maquina 1 recibe archivo con exito");
                         FileWriter fichero = null;
                         PrintWriter pw = null;
-                        try{
-                            int id = in.readInt();
-                            fichero = new FileWriter("./src/maquina virtual 1/"+comando[1]+" parte "+id+".txt");
-                            pw = new PrintWriter(fichero);
-                            pw.println(in.readUTF());
-                            System.out.println("Maquina escribe el archivo "+ comando [1] + " parte "+id);
-
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        } finally {
+                        while (true) {
                             try {
-                                if (null != fichero)
-                                    fichero.close();
-                            } catch (Exception e2) {
-                                e2.printStackTrace();
+                                if(!in.readUTF().equals("termino")){
+                                    int id = in.readInt();
+                                    fichero = new FileWriter("./src/maquina virtual 1/" + comando[1] + " parte " + id + ".txt");
+                                    pw = new PrintWriter(fichero);
+                                    pw.println(in.readUTF());
+                                    System.out.println("Maquina escribe el archivo " + comando[1] + " parte " + id);
+                                }
+                                else {
+                                    break;
+                                }
+
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            } finally {
+                                try {
+                                    if (null != fichero)
+                                        fichero.close();
+                                } catch (Exception e2) {
+                                    e2.printStackTrace();
+                                }
                             }
                         }
-
                         break;
 
                     default:

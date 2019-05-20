@@ -148,13 +148,8 @@ class ClientHandler extends Thread
                         int totalMaquinas=2;
                         int maquinaVirtual=1;
                         byte[] temp = new byte[47000];
-
                         while ((in.read(temp,0,temp.length)) > 0){
-                            System.out.println(temp.length);
                             String byte64 = new sun.misc.BASE64Encoder().encode(temp);
-
-                            System.out.println(byte64.length());
-                            System.out.println("pasa pasa");
                             if (maquinaVirtual==1){
                                 dos.writeInt(id);
                                 dos.writeUTF(byte64);
@@ -168,9 +163,9 @@ class ClientHandler extends Thread
                                 maquinaVirtual=1;
                             }
                             id+=1;
-
                         }
-
+                        dos.writeUTF("termino");
+                        dos2.writeUTF("termino");
                         FileWriter fichero = null;
                         PrintWriter pw = null;
                         try{
