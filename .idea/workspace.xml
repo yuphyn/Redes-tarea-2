@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbeabb44-69c5-46bf-b44b-4c09a1c50455" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Redes-tarea-2/servidor/indice.txt.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Servidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servidor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/maquina virtual 1/Fondo.jpg parte 1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/maquina virtual 1/Fondo.jpg parte 11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/maquina virtual 1/Fondo.jpg parte 3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/maquina virtual 1/Fondo.jpg parte 5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/maquina virtual 1/Fondo.jpg parte 7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/maquina virtual 1/Fondo.jpg parte 9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/maquina virtual 2/Fondo.jpg parte 10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/maquina virtual 2/Fondo.jpg parte 2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/maquina virtual 2/Fondo.jpg parte 4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/maquina virtual 2/Fondo.jpg parte 6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/maquina virtual 2/Fondo.jpg parte 8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servidor/indice.txt.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,7 +33,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Maquina1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
+            <state relative-caret-position="1768">
               <caret line="110" column="38" selection-start-line="110" selection-start-column="38" selection-end-line="110" selection-end-column="38" />
             </state>
           </provider>
@@ -29,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cliente.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="39" column="47" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
+            <state relative-caret-position="187">
+              <caret line="38" column="63" selection-start-line="38" selection-start-column="63" selection-end-line="38" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -41,8 +54,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Servidor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="156" column="46" selection-start-line="156" selection-start-column="46" selection-end-line="156" selection-end-column="46" />
+            <state relative-caret-position="260">
+              <caret line="235" column="37" selection-start-line="235" selection-start-column="37" selection-end-line="235" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -54,7 +67,7 @@
         <entry file="file://$PROJECT_DIR$/src/Maquina2.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="269">
-              <caret line="110" column="53" lean-forward="true" selection-start-line="108" selection-start-column="36" selection-end-line="110" selection-end-column="53" />
+              <caret line="95" column="55" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -85,7 +98,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -103,6 +115,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -172,17 +185,18 @@
       <updated>1558307095522</updated>
       <workItem from="1558307098915" duration="15741000" />
       <workItem from="1558333012016" duration="6890000" />
-      <workItem from="1558340120950" duration="1514000" />
+      <workItem from="1558340120950" duration="2223000" />
+      <workItem from="1558362371039" duration="4120000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24145000" />
+    <option name="totallyTimeSpent" value="28974000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14563759" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.147651" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -191,7 +205,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.39235127" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.28470254" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -219,32 +233,32 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Maquina1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
+        <state relative-caret-position="1768">
           <caret line="110" column="38" selection-start-line="110" selection-start-column="38" selection-end-line="110" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Maquina2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="110" column="53" lean-forward="true" selection-start-line="108" selection-start-column="36" selection-end-line="110" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cliente.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="39" column="47" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
+        <state relative-caret-position="187">
+          <caret line="38" column="63" selection-start-line="38" selection-start-column="63" selection-end-line="38" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maquina2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="95" column="55" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Servidor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="156" column="46" selection-start-line="156" selection-start-column="46" selection-end-line="156" selection-end-column="46" />
+        <state relative-caret-position="260">
+          <caret line="235" column="37" selection-start-line="235" selection-start-column="37" selection-end-line="235" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

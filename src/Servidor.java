@@ -1,3 +1,5 @@
+import org.omg.CORBA.SystemException;
+
 import java.io.*;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
@@ -117,11 +119,37 @@ class ClientHandler extends Thread
                 }
                 switch (comando[0]) {
                     case "ls":
-                        System.out.println("Ejecutando ls");
-                        out.writeUTF(dis.readUTF()+dis2.readUTF()); //leer informacion maquinas virtuales y envia a servidor
-                        // manda mensaje a maquinas virtuales.
-                        dos.writeUTF("Información recibida");
-                        dos2.writeUTF("Información recibida");
+                        Path dir = Paths.get("./src/servidor");
+                        System.out.println("entre a ls");
+                        StringBuilder names = new StringBuilder();
+                        try (DirectoryStream<Path> stream = Files.newDirectoryStream(dir)) {
+                            for (Path file : stream) {
+                                int FLAG = 1;
+                                BufferedReader br = new BufferedReader(new FileReader(file.toString()));
+                                String line = br.readLine();
+                                File f = new File(line);
+                                if(!f.exists()){
+                                    FLAG=0;
+                                }
+                                System.out.println(line);
+                                while (line != null) {
+                                    line = br.readLine();
+                                    if (line != null) {
+                                        System.out.println(line);
+                                        File fa = new File(line);
+                                        if(!fa.exists()){
+                                            FLAG=0;
+                                        }
+                                    }
+                                }
+                                br.close();
+                                if(FLAG==1){
+                                    String str = file.toString().substring(0, file.toString().length() - 4);
+                                    names.append(str+"\n");
+                                }
+                            }
+                        }
+                        out.writeUTF(names.toString());
                         break;
                         /*
                     case "get":
@@ -151,19 +179,24 @@ class ClientHandler extends Thread
                         long tamanoTotalL = in.readLong();
                         int tamanoTotal = (int) tamanoTotalL;
                         System.out.println("total: "+tamanoTotal);
+                        PrintWriter writer = new PrintWriter("./src/servidor/"+comando[1]+".txt", "UTF-8");
                         while (tamanoTotal>0 && in.read(temp,0,Math.min(47000,tamanoTotal)) > 0){
                             System.out.println("el id es: "+ id);
                             String byte64 = new sun.misc.BASE64Encoder().encode(temp);
+                            System.out.println(byte64.length());
                             tamanoTotal-=47000;
-                            FileWriter fichero = new FileWriter("./src/maquina virtual " + maquinaVirtual + "/" + comando[1] + " parte " + id + ".txt");
+                            String ruta = "./src/maquina virtual " + maquinaVirtual + "/" + comando[1] + " parte " + id + ".txt";
+                            FileWriter fichero = new FileWriter(ruta);
                             PrintWriter pw = new PrintWriter(fichero);
                             pw.println(byte64);
+                            writer.println(ruta);
                             maquinaVirtual+=1;
                             if (maquinaVirtual>totalMaquinas){
                                 maquinaVirtual=1;
                             }
                             id+=1;
                         }
+                        writer.close();
                         System.out.println("sali del while");
                         FileWriter fichero = null;
                         PrintWriter pw = null;
@@ -185,10 +218,23 @@ class ClientHandler extends Thread
                         break;
 
                     case "delete":
-                        String path_to_remove = "./"+comando[1];
+                        String path_to_remove = "./src/servidor/"+comando[1]+".txt";
                         File file = new File(path_to_remove);
-                        if(file.delete())
+                        if(file.exists())
                         {
+                            BufferedReader br = new BufferedReader(new FileReader(file.toString()));
+                            String line = br.readLine();
+                            File f = new File(line);
+                            f.delete();
+                            while (line != null) {
+                                line = br.readLine();
+                                if (line!=null) {
+                                    File fa = new File(line);
+                                    fa.delete();
+                                }
+                            }
+                            br.close();
+                            file.delete();
                             out.writeUTF("Archivo borrado");
                         }
                         else
