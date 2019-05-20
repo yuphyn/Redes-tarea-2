@@ -1,6 +1,8 @@
 import java.io.*;
 import java.net.*;
+import java.nio.file.Paths;
 import java.util.Scanner;
+import java.nio.file.Files;
 
 public class Cliente {
     public static void main(String[] args)
@@ -33,10 +35,19 @@ public class Cliente {
                 else if(tosend.toLowerCase().contains("put".toLowerCase())){
                     String[] file_name = tosend.split(" ",2);
                     // leer archivo
-                    File file = new File("./src/cliente/"+file_name[1]);
-                    int tamanoArchivo = ( int )file.length();
-                    byte[] bytes = new byte[tamanoArchivo];
-                    InputStream in = new FileInputStream(file);
+                    //File file = new File("./src/cliente/"+file_name[1]);
+                    //int tamanoArchivo = ( int )file.length();
+                    String path = "./src/cliente/"+file_name[1];
+                    System.out.println(path);
+                    byte[] bytes = Files.readAllBytes(Paths.get(path));
+                    int tamanoArchivo = bytes.length;
+
+                    try (FileOutputStream fos = new FileOutputStream("./src/cliente/test.jpg")) {
+                        fos.write(bytes);
+                        //fos.close(); There is no more need for this line since you had created the instance of "fos" inside the try. And this will automatically close the OutputStream
+                    }
+
+                    //InputStream in = new FileInputStream(file);
                     dos.writeLong(tamanoArchivo);
                     dos.write(bytes, 0, tamanoArchivo);
 
