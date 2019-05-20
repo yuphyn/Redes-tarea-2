@@ -100,9 +100,10 @@ class ServerHandler extends Thread
                         PrintWriter pw = null;
                         try{
                             int id = in.readInt();
-                            fichero = new FileWriter("./src/maquina virtual 1/"+comando[1]+id+".txt");
+                            fichero = new FileWriter("./src/maquina virtual 1/"+comando[1]+" parte "+id+".txt");
                             pw = new PrintWriter(fichero);
                             pw.println(in.readUTF());
+                            System.out.println("Maquina escribe el archivo "+ comando [1] + " parte "+id);
 
                         } catch (Exception e) {
                             e.printStackTrace();

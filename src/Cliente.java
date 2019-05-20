@@ -31,9 +31,6 @@ public class Cliente {
                     break;
                 }
                 else if(tosend.toLowerCase().contains("put".toLowerCase())){
-
-
-
                     String[] file_name = tosend.split(" ",2);
                     // leer archivo
                     File file = new File("./src/cliente/"+file_name[1]);

@@ -70,12 +70,10 @@ class Server2Handler extends Thread
             try {
                 // Ask user what he wants
                 out.writeUTF("Maquina 2 Conectada esperando instrucción:");
-
                 // receive the answer from client
                 received = in.readUTF();
 
                 String[] comando= received.split(" ",2);
-
 
                 if(comando[0].equals("Exit"))
                 {
@@ -102,11 +100,13 @@ class Server2Handler extends Thread
                     case "put":
                         FileWriter fichero = null;
                         PrintWriter pw = null;
+                        out.writeUTF("Maquina 2 recibe archivo con exito");
                         try{
                             int id = in.readInt();
-                            fichero = new FileWriter("./src/maquina virtual 2/"+comando[1]+id+".txt");
+                            fichero = new FileWriter("./src/maquina virtual 2/"+comando[1]+ " parte "+id+".txt");
                             pw = new PrintWriter(fichero);
                             pw.println(in.readUTF());
+                            System.out.println("Maquina escribe el archivo "+ comando [1] + "parte "+ "id");
 
                         } catch (Exception e) {
                             e.printStackTrace();
@@ -118,7 +118,6 @@ class Server2Handler extends Thread
                                 e2.printStackTrace();
                             }
                         }
-                        out.writeUTF("Maquina 2 recibe archivo con exito");
                         break;
                     default:
                         out.writeUTF("Input inválido");

@@ -41,8 +41,6 @@ public class Servidor {
                 DataInputStream dis2 = new DataInputStream(m2.getInputStream());
                 DataOutputStream dos2 = new DataOutputStream(m2.getOutputStream());
 
-
-
                 // obtaining input and out streams
                 DataInputStream in = new DataInputStream(s.getInputStream());
                 DataOutputStream out = new DataOutputStream(s.getOutputStream());
@@ -144,26 +142,24 @@ class ClientHandler extends Thread
                         break; */
                     case "put":
                         System.out.println("Ejecutando put");
-                        //DataOutputStream dosm1 = new DataOutputStream(m.getOutputStream());
-                        //DataInputStream dism1 = new DataInputStream(m.getInputStream());
-                        dis.readUTF();
-
-
-                        int len;
+                        System.out.println(dis.readUTF());
+                        System.out.println(dis2.readUTF());
                         int id=1;
                         int totalMaquinas=2;
                         int maquinaVirtual=1;
                         byte[] temp = new byte[47000];
 
-                        while ((len = in.read(temp,0,temp.length)) > 0){
+                        while ((in.read(temp,0,temp.length)) > 0){
                             System.out.println(temp.length);
                             String byte64 = new sun.misc.BASE64Encoder().encode(temp);
+
                             System.out.println(byte64.length());
+                            System.out.println("pasa pasa");
                             if (maquinaVirtual==1){
                                 dos.writeInt(id);
                                 dos.writeUTF(byte64);
                             }
-                            else{
+                            if (maquinaVirtual==2){
                                 dos2.writeInt(id);
                                 dos2.writeUTF(byte64);
                             }
@@ -175,16 +171,10 @@ class ClientHandler extends Thread
 
                         }
 
-
-
-
-
-                        //dos.writeUTF(Mensaje);
-
                         FileWriter fichero = null;
                         PrintWriter pw = null;
                         try{
-                            fichero = new FileWriter("./src/servidor/log.txt");
+                            fichero = new FileWriter("./src/servidor/indice.txt");
                             pw = new PrintWriter(fichero);
                             pw.println(comando[1] + " fue enviado a maquina 1");
                         } catch (Exception e) {
