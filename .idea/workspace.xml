@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="812393c2-fbee-43f2-b165-78468a3326fb" name="Default Changelist" comment="">
+    <list default="true" id="bbeabb44-69c5-46bf-b44b-4c09a1c50455" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Redes-tarea-2/META-INF/Redes-tarea-2.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Redes-tarea-2/maquina virtual 1/prueba.jpg.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Redes-tarea-2/maquina virtual 1/prueba.jpg.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Redes-tarea-2/servidor/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Redes-tarea-2/servidor/log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cliente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Maquina1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Maquina1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Maquina2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Maquina2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Servidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servidor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/maquina virtual 1/prueba.jpg.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/maquina virtual 1/prueba.jpg.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servidor/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/servidor/log.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,15 +24,37 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Maquina1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="529">
+              <caret line="104" column="53" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Cliente.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Servidor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="58" column="13" lean-forward="true" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+            <state relative-caret-position="-122">
+              <caret line="175" column="25" lean-forward="true" selection-start-line="175" selection-start-column="25" selection-end-line="175" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -35,59 +65,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Maquina2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="104" column="28" lean-forward="true" selection-start-line="104" selection-start-column="28" selection-end-line="104" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Maquina1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1516">
-              <caret line="33" column="32" lean-forward="true" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Cliente.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="966">
-              <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/prueba.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="69" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="476">
+              <caret line="106" column="90" selection-start-line="106" selection-start-column="90" selection-end-line="106" selection-end-column="90" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -95,22 +79,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/prueba.java" />
-        <option value="$PROJECT_DIR$/src/Maquina2.java" />
-        <option value="$PROJECT_DIR$/src/Servidor.java" />
         <option value="$PROJECT_DIR$/src/Maquina1.java" />
         <option value="$PROJECT_DIR$/src/Cliente.java" />
+        <option value="$PROJECT_DIR$/src/Maquina2.java" />
+        <option value="$PROJECT_DIR$/src/Servidor.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="10" />
-    <option name="y" value="20" />
-    <option name="width" value="1346" />
-    <option name="height" value="688" />
-  </component>
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="85" />
+    <option name="y" value="25" />
+    <option name="width" value="1750" />
+    <option name="height" value="980" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -121,19 +101,13 @@
         <subPane>
           <expand>
             <path>
-              <item name="redes-2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Redes-tarea-2" type="b2602c69:ProjectViewProjectNode" />
               <item name="Redes-tarea-2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="redes-2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Redes-tarea-2" type="b2602c69:ProjectViewProjectNode" />
               <item name="Redes-tarea-2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redes-2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Redes-tarea-2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="cliente" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -147,8 +121,6 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -191,20 +163,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="prueba" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="prueba" />
-      <module name="Redes-tarea-2" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Cliente" />
         <item itemvalue="Application.Servidor" />
         <item itemvalue="Application.Maquina2" />
         <item itemvalue="Application.Maquina1" />
-        <item itemvalue="Application.prueba" />
       </list>
     </recent_temporary>
   </component>
@@ -213,105 +177,61 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="812393c2-fbee-43f2-b165-78468a3326fb" name="Default Changelist" comment="" />
-      <created>1557867158885</created>
+      <changelist id="bbeabb44-69c5-46bf-b44b-4c09a1c50455" name="Default Changelist" comment="" />
+      <created>1558307095522</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1557867158885</updated>
-      <workItem from="1557867168449" duration="2362000" />
-      <workItem from="1558197517204" duration="717000" />
-      <workItem from="1558215882815" duration="22099000" />
-      <workItem from="1558294523270" duration="3637000" />
+      <updated>1558307095522</updated>
+      <workItem from="1558307098915" duration="15741000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28815000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="15741000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13615733" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22483222" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.3286119" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.2536825" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23937677" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3289689" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49924356" weight="0.3289689" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5015129" side_tool="true" weight="0.2536825" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3289689" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13464448" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.2536825" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3289689" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49924356" weight="0.3289689" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5015129" side_tool="true" weight="0.2536825" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3289689" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/maquina virtual 2/Maquina2.java" />
-    <entry file="file://$PROJECT_DIR$/src/prueba.java">
+    <entry file="file://$PROJECT_DIR$/src/Cliente.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="69" />
+        <state relative-caret-position="323">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -320,38 +240,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Maquina2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="104" column="28" lean-forward="true" selection-start-line="104" selection-start-column="28" selection-end-line="104" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Servidor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" column="13" lean-forward="true" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="476">
+          <caret line="106" column="90" selection-start-line="106" selection-start-column="90" selection-end-line="106" selection-end-column="90" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Maquina1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1516">
-          <caret line="33" column="32" lean-forward="true" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="529">
+          <caret line="104" column="53" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cliente.java">
+    <entry file="file://$PROJECT_DIR$/src/Servidor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+        <state relative-caret-position="-122">
+          <caret line="175" column="25" lean-forward="true" selection-start-line="175" selection-start-column="25" selection-end-line="175" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

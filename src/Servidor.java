@@ -147,14 +147,46 @@ class ClientHandler extends Thread
                         //DataOutputStream dosm1 = new DataOutputStream(m.getOutputStream());
                         //DataInputStream dism1 = new DataInputStream(m.getInputStream());
                         dis.readUTF();
-                        dos.writeUTF(in.readUTF());
+
+
+                        int len;
+                        int id=1;
+                        int totalMaquinas=2;
+                        int maquinaVirtual=1;
+                        byte[] temp = new byte[47000];
+
+                        while ((len = in.read(temp,0,temp.length)) > 0){
+                            System.out.println(temp.length);
+                            String byte64 = new sun.misc.BASE64Encoder().encode(temp);
+                            System.out.println(byte64.length());
+                            if (maquinaVirtual==1){
+                                dos.writeInt(id);
+                                dos.writeUTF(byte64);
+                            }
+                            else{
+                                dos2.writeInt(id);
+                                dos2.writeUTF(byte64);
+                            }
+                            maquinaVirtual+=1;
+                            if (maquinaVirtual>totalMaquinas){
+                                maquinaVirtual=1;
+                            }
+                            id+=1;
+
+                        }
+
+
+
+
+
+                        //dos.writeUTF(Mensaje);
 
                         FileWriter fichero = null;
                         PrintWriter pw = null;
                         try{
                             fichero = new FileWriter("./src/servidor/log.txt");
                             pw = new PrintWriter(fichero);
-                            pw.println(comando[1] + "fue enviado a maquina 1");
+                            pw.println(comando[1] + " fue enviado a maquina 1");
                         } catch (Exception e) {
                             e.printStackTrace();
                         } finally {
@@ -167,6 +199,7 @@ class ClientHandler extends Thread
                         }
                         out.writeUTF("servidor envio archivo a maquinas virtuales");
                         break;
+
                     case "delete":
                         String path_to_remove = "./"+comando[1];
                         File file = new File(path_to_remove);

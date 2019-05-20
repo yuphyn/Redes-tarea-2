@@ -31,16 +31,18 @@ public class Cliente {
                     break;
                 }
                 else if(tosend.toLowerCase().contains("put".toLowerCase())){
+
+
+
                     String[] file_name = tosend.split(" ",2);
                     // leer archivo
                     File file = new File("./src/cliente/"+file_name[1]);
-                    java.io.FileInputStream fis= new java.io.FileInputStream(file);
-                    byte[] buff= new byte[(int)file.length()];
-                    fis.read(buff);
-                    // codificar base64
-                    String base64= new sun.misc.BASE64Encoder().encode(buff);
-                    dos.writeUTF(base64);
-                    System.out.println(dis.readUTF());
+                    int tamanoArchivo = ( int )file.length();
+                    byte[] bytes = new byte[tamanoArchivo];
+                    InputStream in = new FileInputStream(file);
+                    dos.write(bytes, 0, tamanoArchivo);
+
+                    System.out.println("archivo enviado por el cliente");
 
                 }
                 /*

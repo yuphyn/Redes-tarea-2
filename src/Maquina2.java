@@ -103,7 +103,8 @@ class Server2Handler extends Thread
                         FileWriter fichero = null;
                         PrintWriter pw = null;
                         try{
-                            fichero = new FileWriter("./src/maquina virtual 2/"+comando[1]+".txt");
+                            int id = in.readInt();
+                            fichero = new FileWriter("./src/maquina virtual 2/"+comando[1]+id+".txt");
                             pw = new PrintWriter(fichero);
                             pw.println(in.readUTF());
 
