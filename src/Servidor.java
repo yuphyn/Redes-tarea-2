@@ -148,25 +148,23 @@ class ClientHandler extends Thread
                         int totalMaquinas=2;
                         int maquinaVirtual=1;
                         byte[] temp = new byte[47000];
-                        while ((in.read(temp,0,temp.length)) > 0){
+                        long tamanoTotalL = in.readLong();
+                        int tamanoTotal = (int) tamanoTotalL;
+                        System.out.println("total: "+tamanoTotal);
+                        while (tamanoTotal>0 && in.read(temp,0,Math.min(47000,tamanoTotal)) > 0){
                             System.out.println("el id es: "+ id);
                             String byte64 = new sun.misc.BASE64Encoder().encode(temp);
-                            if (maquinaVirtual==1){
-                                dos.writeInt(id);
-                                dos.writeUTF(byte64);
-                            }
-                            if (maquinaVirtual==2){
-                                dos2.writeInt(id);
-                                dos2.writeUTF(byte64);
-                            }
+                            tamanoTotal-=47000;
+                            FileWriter fichero = new FileWriter("./src/maquina virtual " + maquinaVirtual + "/" + comando[1] + " parte " + id + ".txt");
+                            PrintWriter pw = new PrintWriter(fichero);
+                            pw.println(byte64);
                             maquinaVirtual+=1;
                             if (maquinaVirtual>totalMaquinas){
                                 maquinaVirtual=1;
                             }
                             id+=1;
                         }
-                        dos.writeUTF("termino");
-                        dos2.writeUTF("termino");
+                        System.out.println("sali del while");
                         FileWriter fichero = null;
                         PrintWriter pw = null;
                         try{

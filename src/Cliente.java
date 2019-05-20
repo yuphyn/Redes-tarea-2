@@ -37,6 +37,7 @@ public class Cliente {
                     int tamanoArchivo = ( int )file.length();
                     byte[] bytes = new byte[tamanoArchivo];
                     InputStream in = new FileInputStream(file);
+                    dos.writeLong(tamanoArchivo);
                     dos.write(bytes, 0, tamanoArchivo);
 
                     System.out.println("archivo enviado por el cliente");
