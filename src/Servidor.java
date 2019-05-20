@@ -33,17 +33,18 @@ public class Servidor {
                 Scanner scn = new Scanner(System.in);
                 // getting localhost ip
                 InetAddress ip = InetAddress.getByName("localhost");
-                // establish the connection with server port 5056
+/*
+                // establish the connection with server port 5057
                 Socket m  = new Socket(ip, 5057);
                 // obtaining input and out streams
                 DataInputStream dis = new DataInputStream(m.getInputStream());
                 DataOutputStream dos = new DataOutputStream(m.getOutputStream());
-                // establish the connection with server port 5056
+                // establish the connection with server port 5058
                 Socket m2 = new Socket(ip, 5058);
                 // obtaining input and out streams
                 DataInputStream dis2 = new DataInputStream(m2.getInputStream());
                 DataOutputStream dos2 = new DataOutputStream(m2.getOutputStream());
-
+*/
                 // obtaining input and out streams
                 DataInputStream in = new DataInputStream(s.getInputStream());
                 DataOutputStream out = new DataOutputStream(s.getOutputStream());
@@ -51,7 +52,7 @@ public class Servidor {
                 System.out.println("Assigning new thread for this client");
 
                 // create a new thread object
-                Thread t = new ClientHandler(s, in, out, dis,dis2, dos, dos2,m,m2);
+                Thread t = new ClientHandler(s, in, out);
 
                 // Invoking the start() method
                 t.start();
@@ -72,26 +73,14 @@ class ClientHandler extends Thread
     final DataInputStream in;
     final DataOutputStream out;
     final Socket s;
-    final DataInputStream dis;
-    final DataInputStream dis2;
-    final DataOutputStream dos;
-    final DataOutputStream dos2;
-    final Socket m;
-    final Socket m2;
 
 
     // Constructor
-    public ClientHandler(Socket s, DataInputStream in, DataOutputStream out, DataInputStream dis,DataInputStream dis2,DataOutputStream dos,DataOutputStream dos2, Socket m,Socket m2)
+    public ClientHandler(Socket s, DataInputStream in, DataOutputStream out)
     {
         this.s = s;
         this.in = in;
         this.out = out;
-        this.dis= dis;
-        this.dis2 =dis2;
-        this.dos= dos;
-        this.dos2= dos2;
-        this.m = m;
-        this.m2 = m2;
     }
 
     @Override
@@ -102,13 +91,9 @@ class ClientHandler extends Thread
         {
             try {
                 out.writeUTF("Server Conectado, ingrese instrucción:"); // mensaje al cliente
-                //mensaje maquina virtuales
-                System.out.println(dis.readUTF());
-                System.out.println(dis2.readUTF());
                 // receive the answer from client
                 received = in.readUTF();
-                dos.writeUTF(received); //manda mensaje a maquina virtual 1
-                dos2.writeUTF(received); //manda mensaje a maquina virtual 2
+
                 String[] comando= received.split(" ",2);
 
                 if(comando[0].equals("Exit")){
@@ -193,28 +178,8 @@ class ClientHandler extends Thread
                         else{
                             System.out.println("El archivo no se encuentra en el servidor");
                         }
-
-
-                        /*
-                        DataOutputStream dos = new DataOutputStream(s.getOutputStream());
-                        File file2 = new File(comando[1]);
-                        DataOutputStream o2 = new DataOutputStream(s.getOutputStream());
-                        // Obtenemos el tamaño del archivo
-                        int tamanoArchivo = ( int )file2.length();
-                        // Enviamos el tamaño del archivo
-                        dos.writeInt( tamanoArchivo );
-                        byte[] bytes2 = new byte[tamanoArchivo];
-                        InputStream i2 = new FileInputStream(file2);
-                        int count2;
-                        while ((count2 = i2.read(bytes2)) > 0) {
-                            o2.write(bytes2, 0, count2);
-                        }
-                        System.out.println("archivo "+ comando[1] +" enviado por el servidor");
-                        break; */
                     case "put":
                         System.out.println("Ejecutando put");
-                        System.out.println(dis.readUTF());
-                        System.out.println(dis2.readUTF());
                         int id=1;
                         int totalMaquinas=2;
                         int maquinaVirtual=1;
