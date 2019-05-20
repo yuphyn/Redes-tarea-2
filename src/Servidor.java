@@ -1,4 +1,5 @@
 import org.omg.CORBA.SystemException;
+import sun.misc.BASE64Decoder;
 
 import java.io.*;
 import java.nio.file.DirectoryStream;
@@ -151,8 +152,50 @@ class ClientHandler extends Thread
                         }
                         out.writeUTF(names.toString());
                         break;
-                        /*
+
                     case "get":
+                        System.out.println("Ejecutando get");
+                        String path_to_get = "./src/servidor/"+comando[1]+".txt";
+                        File file_to_get = new File(path_to_get);
+
+                        ByteArrayOutputStream outputStream = new ByteArrayOutputStream( );
+
+
+                        if(file_to_get.exists())
+                        {
+                            BufferedReader br = new BufferedReader(new FileReader(file_to_get.toString()));
+                            String line = br.readLine();
+                            //to byte64
+                            byte[] encoded = Files.readAllBytes(Paths.get(line));
+                            String byte64 = new String(encoded);
+                            byte[] finale = new sun.misc.BASE64Decoder().decodeBuffer(byte64);
+                            outputStream.write(finale);
+                            while (line != null) {
+                                line = br.readLine();
+                                if (line!=null) {
+                                    //tobyte64
+                                    byte[] encoded_ = Files.readAllBytes(Paths.get(line));
+                                    String byte64_ = new String(encoded_);
+                                    byte[] finale_ = new sun.misc.BASE64Decoder().decodeBuffer(byte64_);
+                                    outputStream.write(finale_);
+                                }
+                            }
+                            br.close();
+                            byte[] all = outputStream.toByteArray();
+
+                            String ruta = "./src/cliente/" + comando[1];
+                            try (FileOutputStream fos = new FileOutputStream(ruta)) {
+                                fos.write(all);
+                                //fos.close(); There is no more need for this line since you had created the instance of "fos" inside the try. And this will automatically close the OutputStream
+                            }
+
+                        }
+                        else{
+                            System.out.println("El archivo no se encuentra en el servidor");
+                        }
+
+
+                        /*
                         DataOutputStream dos = new DataOutputStream(s.getOutputStream());
                         File file2 = new File(comando[1]);
                         DataOutputStream o2 = new DataOutputStream(s.getOutputStream());

@@ -3,17 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bbeabb44-69c5-46bf-b44b-4c09a1c50455" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/Servidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servidor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/maquina virtual 1/Fondo.jpg parte 1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/maquina virtual 1/Fondo.jpg parte 1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/maquina virtual 1/Fondo.jpg parte 11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/maquina virtual 1/Fondo.jpg parte 11.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/maquina virtual 1/Fondo.jpg parte 3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/maquina virtual 1/Fondo.jpg parte 3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/maquina virtual 1/Fondo.jpg parte 5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/maquina virtual 1/Fondo.jpg parte 5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/maquina virtual 1/Fondo.jpg parte 7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/maquina virtual 1/Fondo.jpg parte 7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/maquina virtual 1/Fondo.jpg parte 9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/maquina virtual 1/Fondo.jpg parte 9.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/maquina virtual 2/Fondo.jpg parte 10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/maquina virtual 2/Fondo.jpg parte 10.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/maquina virtual 2/Fondo.jpg parte 2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/maquina virtual 2/Fondo.jpg parte 2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/maquina virtual 2/Fondo.jpg parte 4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/maquina virtual 2/Fondo.jpg parte 4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/maquina virtual 2/Fondo.jpg parte 6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/maquina virtual 2/Fondo.jpg parte 6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/maquina virtual 2/Fondo.jpg parte 8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/maquina virtual 2/Fondo.jpg parte 8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cliente/Fondo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/cliente/Fondo.jpg" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,7 +20,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Maquina1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1768">
+            <state relative-caret-position="977">
               <caret line="110" column="38" selection-start-line="110" selection-start-column="38" selection-end-line="110" selection-end-column="38" />
             </state>
           </provider>
@@ -39,20 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cliente.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="38" column="63" selection-start-line="38" selection-start-column="63" selection-end-line="38" selection-end-column="63" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Servidor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="190" column="47" lean-forward="true" selection-start-line="190" selection-start-column="47" selection-end-line="190" selection-end-column="47" />
+            <state relative-caret-position="153">
+              <caret line="45" column="18" lean-forward="true" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,10 +39,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Servidor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-700">
+              <caret line="160" column="41" selection-start-line="160" selection-start-column="41" selection-end-line="160" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Maquina2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="95" column="55" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="55" />
+            <state relative-caret-position="235">
+              <caret line="93" column="29" lean-forward="true" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -183,18 +173,17 @@
       <workItem from="1558307098915" duration="15741000" />
       <workItem from="1558333012016" duration="6890000" />
       <workItem from="1558340120950" duration="2223000" />
-      <workItem from="1558362371039" duration="4524000" />
+      <workItem from="1558362371039" duration="6844000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29378000" />
+    <option name="totallyTimeSpent" value="31698000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.147651" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.147651" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -203,7 +192,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.28470254" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.28470254" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -231,15 +220,25 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Maquina1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1768">
+        <state relative-caret-position="977">
           <caret line="110" column="38" selection-start-line="110" selection-start-column="38" selection-end-line="110" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Servidor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-700">
+          <caret line="160" column="41" selection-start-line="160" selection-start-column="41" selection-end-line="160" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cliente.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="38" column="63" selection-start-line="38" selection-start-column="63" selection-end-line="38" selection-end-column="63" />
+        <state relative-caret-position="153">
+          <caret line="45" column="18" lean-forward="true" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -248,18 +247,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Maquina2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="95" column="55" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Servidor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="190" column="47" lean-forward="true" selection-start-line="190" selection-start-column="47" selection-end-line="190" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="235">
+          <caret line="93" column="29" lean-forward="true" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="29" />
         </state>
       </provider>
     </entry>
