@@ -167,7 +167,10 @@ class ClientHandler extends Thread
                             }
                             br.close();
                             byte[] all = outputStream.toByteArray();
-
+                            int tamaño = all.length;
+                            out.writeUTF(comando[1]);
+                            out.writeInt(tamaño);
+                            out.write(all,0,tamaño);
                             String ruta = "./src/cliente/" + comando[1];
                             try (FileOutputStream fos = new FileOutputStream(ruta)) {
                                 fos.write(all);

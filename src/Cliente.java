@@ -54,26 +54,18 @@ public class Cliente {
                     System.out.println("archivo enviado por el cliente");
 
                 }
-                /*
+
                 else if(tosend.toLowerCase().contains("get".toLowerCase())){
-                    // Creamos flujo de entrada para leer los datos que envia el cliente
-                    DataInputStream di = new DataInputStream( s.getInputStream());
-                    DataInputStream in = new DataInputStream( s.getInputStream());
-                    String[] filename = tosend.split(" ",2);
-                    OutputStream o = new FileOutputStream("/home/cesar/Escritorio/"+filename[1]);
-                    int tam = di.readInt();
-                    byte[] bytes2 = new byte[tam];
-                    System.out.println("empezando a copiar");
-                    // Obtenemos el archivo mediante la lectura de bytes enviados
-                    for( int i = 0; i < bytes2.length; i++ )
-                    {
-                        bytes2[i] = ( byte )in.read( );
+                    String ruta = "./src/cliente/" + dis.readUTF();
+                    int tamaño = dis.readInt();
+                    byte[] archivo = new byte[tamaño];
+                    archivo =dis.read();
+                    try (FileOutputStream fos = new FileOutputStream(ruta)) {
+                        fos.write(dis.read());
+                        //fos.close(); There is no more need for this line since you had created the instance of "fos" inside the try. And this will automatically close the OutputStream
                     }
-                    // Escribimos el archivo
-                    o.write(bytes2);
-                    System.out.println("Archivo recibido por cliente");
-                    System.out.println("Archivo "+filename[1]+" copiado en el cliente\n");
-                } */
+
+                }
 
 
                 // printing date or time as requested by client
