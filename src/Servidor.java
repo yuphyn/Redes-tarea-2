@@ -189,6 +189,7 @@ class ClientHandler extends Thread
                             FileWriter fichero = new FileWriter(ruta);
                             PrintWriter pw = new PrintWriter(fichero);
                             pw.println(byte64);
+                            pw.close();
                             writer.println(ruta);
                             maquinaVirtual+=1;
                             if (maquinaVirtual>totalMaquinas){
@@ -198,22 +199,6 @@ class ClientHandler extends Thread
                         }
                         writer.close();
                         System.out.println("sali del while");
-                        FileWriter fichero = null;
-                        PrintWriter pw = null;
-                        try{
-                            fichero = new FileWriter("./src/servidor/indice.txt");
-                            pw = new PrintWriter(fichero);
-                            pw.println(comando[1] + " fue enviado a maquina 1");
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        } finally {
-                            try {
-                                if (null != fichero)
-                                    fichero.close();
-                            } catch (Exception e2) {
-                                e2.printStackTrace();
-                            }
-                        }
                         out.writeUTF("servidor envio archivo a maquinas virtuales");
                         break;
 
