@@ -149,13 +149,16 @@ class ClientHandler extends Thread
                         int maquinaVirtual=1;
                         byte[] temp = new byte[47000];
                         while ((in.read(temp,0,temp.length)) > 0){
+                            System.out.println("el id es: "+ id);
                             String byte64 = new sun.misc.BASE64Encoder().encode(temp);
                             if (maquinaVirtual==1){
                                 dos.writeInt(id);
+                                System.out.println(dis.readUTF());
                                 dos.writeUTF(byte64);
                             }
                             if (maquinaVirtual==2){
                                 dos2.writeInt(id);
+                                System.out.println(dis2.readUTF());
                                 dos2.writeUTF(byte64);
                             }
                             maquinaVirtual+=1;

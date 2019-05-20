@@ -99,6 +99,7 @@ class ServerHandler extends Thread
                         while (true) {
                             try {
                                 if(!in.readUTF().equals("termino")){
+                                    out.writeUTF("parte llego");
                                     int id = in.readInt();
                                     fichero = new FileWriter("./src/maquina virtual 1/" + comando[1] + " parte " + id + ".txt");
                                     pw = new PrintWriter(fichero);

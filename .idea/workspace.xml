@@ -2,6 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbeabb44-69c5-46bf-b44b-4c09a1c50455" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Redes-tarea-2/maquina virtual 1/Fondo.jpg parte 1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Redes-tarea-2/maquina virtual 1/Fondo.jpg parte 260924.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Redes-tarea-2/maquina virtual 1/maquina1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Redes-tarea-2/maquina virtual 1/prueba.jpg parte 1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Redes-tarea-2/maquina virtual 1/prueba.jpg1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Redes-tarea-2/maquina virtual 2/Fondo.jpg parte 2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Redes-tarea-2/maquina virtual 2/Fondo.jpg parte 326460.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Redes-tarea-2/maquina virtual 2/maquina 2.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Maquina1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Maquina1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Maquina2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Maquina2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Servidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servidor.java" afterDir="false" />
@@ -21,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Maquina1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="105" column="31" lean-forward="true" selection-start-line="105" selection-start-column="31" selection-end-line="105" selection-end-column="31" />
+            <state relative-caret-position="127">
+              <caret line="104" column="28" selection-start-line="104" selection-start-column="28" selection-end-line="104" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -30,7 +39,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cliente.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
+            <state relative-caret-position="408">
               <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -42,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Servidor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="168" column="50" lean-forward="true" selection-start-line="168" selection-start-column="50" selection-end-line="168" selection-end-column="50" />
+            <state relative-caret-position="129">
+              <caret line="153" column="46" selection-start-line="153" selection-start-column="46" selection-end-line="153" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -54,8 +63,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Maquina2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="106" column="42" lean-forward="true" selection-start-line="106" selection-start-column="42" selection-end-line="106" selection-end-column="42" />
+            <state relative-caret-position="99">
+              <caret line="106" column="36" selection-start-line="106" selection-start-column="36" selection-end-line="106" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -69,13 +78,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Cliente.java" />
-        <option value="$PROJECT_DIR$/src/Servidor.java" />
         <option value="$PROJECT_DIR$/src/Maquina2.java" />
+        <option value="$PROJECT_DIR$/src/Servidor.java" />
         <option value="$PROJECT_DIR$/src/Maquina1.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="85" />
     <option name="y" value="25" />
     <option name="width" value="1750" />
@@ -99,12 +108,6 @@
               <item name="Redes-tarea-2" type="b2602c69:ProjectViewProjectNode" />
               <item name="Redes-tarea-2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Redes-tarea-2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Redes-tarea-2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="cliente" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Redes-tarea-2" type="b2602c69:ProjectViewProjectNode" />
@@ -184,15 +187,16 @@
       <option name="presentableId" value="Default" />
       <updated>1558307095522</updated>
       <workItem from="1558307098915" duration="15741000" />
-      <workItem from="1558333012016" duration="4752000" />
+      <workItem from="1558333012016" duration="5864000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20493000" />
+    <option name="totallyTimeSpent" value="21605000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14372164" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -203,7 +207,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.507365" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.49590835" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -229,27 +233,27 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Maquina2.java">
+    <entry file="file://$PROJECT_DIR$/src/Cliente.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="106" column="42" lean-forward="true" selection-start-line="106" selection-start-column="42" selection-end-line="106" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Servidor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="168" column="50" lean-forward="true" selection-start-line="168" selection-start-column="50" selection-end-line="168" selection-end-column="50" />
+        <state relative-caret-position="408">
+          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cliente.java">
+    <entry file="file://$PROJECT_DIR$/src/Maquina2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+        <state relative-caret-position="99">
+          <caret line="106" column="36" selection-start-line="106" selection-start-column="36" selection-end-line="106" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Servidor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="153" column="46" selection-start-line="153" selection-start-column="46" selection-end-line="153" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -258,8 +262,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Maquina1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="105" column="31" lean-forward="true" selection-start-line="105" selection-start-column="31" selection-end-line="105" selection-end-column="31" />
+        <state relative-caret-position="127">
+          <caret line="104" column="28" selection-start-line="104" selection-start-column="28" selection-end-line="104" selection-end-column="28" />
         </state>
       </provider>
     </entry>
