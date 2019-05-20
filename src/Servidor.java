@@ -153,12 +153,10 @@ class ClientHandler extends Thread
                             String byte64 = new sun.misc.BASE64Encoder().encode(temp);
                             if (maquinaVirtual==1){
                                 dos.writeInt(id);
-                                System.out.println(dis.readUTF());
                                 dos.writeUTF(byte64);
                             }
                             if (maquinaVirtual==2){
                                 dos2.writeInt(id);
-                                System.out.println(dis2.readUTF());
                                 dos2.writeUTF(byte64);
                             }
                             maquinaVirtual+=1;

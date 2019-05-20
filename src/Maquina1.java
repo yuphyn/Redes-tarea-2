@@ -94,16 +94,17 @@ class ServerHandler extends Thread
                         break;
                     case "put":
                         out.writeUTF("Maquina 1 recibe archivo con exito");
-                        FileWriter fichero = null;
-                        PrintWriter pw = null;
+                        String data;
                         while (true) {
+                            FileWriter fichero = null;
+                            PrintWriter pw = null;
                             try {
-                                if(!in.readUTF().equals("termino")){
-                                    out.writeUTF("parte llego");
+                                data = in.readUTF();
+                                if(!data.equals("termino")){
                                     int id = in.readInt();
                                     fichero = new FileWriter("./src/maquina virtual 1/" + comando[1] + " parte " + id + ".txt");
                                     pw = new PrintWriter(fichero);
-                                    pw.println(in.readUTF());
+                                    pw.println(data);
                                     System.out.println("Maquina escribe el archivo " + comando[1] + " parte " + id);
                                 }
                                 else {
