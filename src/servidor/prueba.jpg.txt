@@ -1,1 +1,0 @@
-./src/maquina virtual 1/prueba.jpg parte 1.txt

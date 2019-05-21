@@ -1,0 +1,11 @@
+./src/maquina virtual 1/Fondo2.jpg parte 1.txt
+./src/maquina virtual 2/Fondo2.jpg parte 2.txt
+./src/maquina virtual 1/Fondo2.jpg parte 3.txt
+./src/maquina virtual 2/Fondo2.jpg parte 4.txt
+./src/maquina virtual 1/Fondo2.jpg parte 5.txt
+./src/maquina virtual 2/Fondo2.jpg parte 6.txt
+./src/maquina virtual 1/Fondo2.jpg parte 7.txt
+./src/maquina virtual 2/Fondo2.jpg parte 8.txt
+./src/maquina virtual 1/Fondo2.jpg parte 9.txt
+./src/maquina virtual 2/Fondo2.jpg parte 10.txt
+./src/maquina virtual 1/Fondo2.jpg parte 11.txt

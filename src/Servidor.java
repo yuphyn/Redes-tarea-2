@@ -153,6 +153,9 @@ class ClientHandler extends Thread
                                 }
                             }
                         }
+                        catch (Exception e){
+                            //pass
+                        }
                         out.writeUTF(names.toString());
                         break;
 
@@ -203,15 +206,15 @@ class ClientHandler extends Thread
                                 fos.write(all);
                                 //fos.close(); There is no more need for this line since you had created the instance of "fos" inside the try. And this will automatically close the OutputStream
                             }
+                            catch (Exception e){
+                                //pass
+                            }
                             out.writeUTF("Servidor termino el get");
                             break;
-
-
                         }
                         else{
                             System.out.println("El archivo no se encuentra en el servidor");
                         }
-
                         break;
 
                     case "put":
@@ -288,7 +291,8 @@ class ClientHandler extends Thread
                         out.writeUTF("Input inválido");
                         break;
                 }
-            } catch (IOException e) {
+            }
+            catch (IOException e) {
                 e.printStackTrace();
             }
         }

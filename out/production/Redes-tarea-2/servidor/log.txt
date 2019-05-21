@@ -1,8 +1,0 @@
-20-05-2019 22:41:13     connection  /127.0.0.1:59016 conección entrante
-20-05-2019 22:41:15     command     /127.0.0.1:59016   ls
-20-05-2019 22:41:25     command     /127.0.0.1:59016     get Fondo2.jpg
-20-05-2019 22:41:32     command     /127.0.0.1:59016     put prueba.jpg
-20-05-2019 22:41:42     command     /127.0.0.1:59016   ls
-20-05-2019 22:42:03     command     /127.0.0.1:59016     delete Fondo2.jpg
-20-05-2019 22:42:05     command     /127.0.0.1:59016   ls
-20-05-2019 22:42:11     command     /127.0.0.1:59016     get prueba.jpg
