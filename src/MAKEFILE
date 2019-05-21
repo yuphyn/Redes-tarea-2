@@ -1,0 +1,16 @@
+all: Servidor.class Cliente.class
+
+Servidor.class:
+	javac Servidor.java
+
+Cliente.class:
+	javac Cliente.java
+
+Servidor:
+	java Servidor
+
+Cliente:
+	java Cliente
+
+clean :
+	rm -f *.class
