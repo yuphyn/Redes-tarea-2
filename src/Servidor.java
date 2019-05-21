@@ -121,13 +121,14 @@ class ClientHandler extends Thread
                             PrintWriter txt = new PrintWriter(new BufferedWriter(new FileWriter("./src/servidor/log.txt", true)));
                             txt.println(timeStamp+"     command     "+s.getRemoteSocketAddress().toString()+"     ls");
                             txt.close();
-                        } catch (IOException e) {
-                            //exception handling left as an exercise for the reader
+                        }
+                        catch (IOException e) {
+                            System.out.println("exepcion"+e);
                         }
                         Path dir = Paths.get("./src/servidor");
                         System.out.println("entre a ls");
                         StringBuilder names = new StringBuilder();
-                        try (DirectoryStream<Path> stream = Files.newDirectoryStream(dir)) {
+                        try (DirectoryStream<Path> stream = Files.newDirectoryStream(dir) ) {
                             for (Path file : stream) {
                                 int FLAG = 1;
                                 BufferedReader br = new BufferedReader(new FileReader(file.toString()));
@@ -153,8 +154,8 @@ class ClientHandler extends Thread
                                 }
                             }
                         }
-                        catch (Exception e){
-                            //pass
+                        catch (Exception e) {
+                            System.out.println("exepcion"+e);
                         }
                         out.writeUTF(names.toString());
                         break;
@@ -175,8 +176,7 @@ class ClientHandler extends Thread
                         ByteArrayOutputStream outputStream = new ByteArrayOutputStream( );
 
 
-                        if(file_to_get.exists())
-                        {
+                        if( file_to_get.exists() ) {
                             BufferedReader br = new BufferedReader(new FileReader(file_to_get.toString()));
                             String line = br.readLine();
                             //to byte64
@@ -204,10 +204,9 @@ class ClientHandler extends Thread
                             String ruta = "./src/cliente/"+ comando[1];
                             try (FileOutputStream fos = new FileOutputStream(ruta)) {
                                 fos.write(all);
-                                //fos.close(); There is no more need for this line since you had created the instance of "fos" inside the try. And this will automatically close the OutputStream
                             }
                             catch (Exception e){
-                                //pass
+                                System.out.println("exepcion"+e);
                             }
                             out.writeUTF("Servidor termino el get");
                             break;
