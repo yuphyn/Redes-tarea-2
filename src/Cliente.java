@@ -41,11 +41,11 @@ public class Cliente {
                     System.out.println(path);
                     byte[] bytes = Files.readAllBytes(Paths.get(path));
                     int tamanoArchivo = bytes.length;
-
+/*
                     try (FileOutputStream fos = new FileOutputStream("./src/cliente/test.jpg")) {
                         fos.write(bytes);
                         //fos.close(); There is no more need for this line since you had created the instance of "fos" inside the try. And this will automatically close the OutputStream
-                    }
+                    }*/
 
                     //InputStream in = new FileInputStream(file);
                     dos.writeLong(tamanoArchivo);
@@ -56,21 +56,24 @@ public class Cliente {
                 }
 
                 else if(tosend.toLowerCase().contains("get".toLowerCase())){
+                    System.out.println(dis.readUTF());
+                    /*
                     String ruta = "./src/cliente/" + dis.readUTF();
-                    int tamaño = dis.readInt();
-                    byte[] archivo = new byte[tamaño];
-                    archivo =dis.read();
+                    long tamano = dis.readLong();
+                    int taman = (int) tamano;
+                    byte[] archivo = new byte[taman];
                     try (FileOutputStream fos = new FileOutputStream(ruta)) {
-                        fos.write(dis.read());
+                        fos.write(dis.read(archivo,0,taman));
                         //fos.close(); There is no more need for this line since you had created the instance of "fos" inside the try. And this will automatically close the OutputStream
                     }
+                    dos.writeUTF("Archivo entregado"); */
 
                 }
-
-
-                // printing date or time as requested by client
-                String received = dis.readUTF();
-                System.out.println(received);
+                else {
+                    // printing date or time as requested by client
+                    String received = dis.readUTF();
+                    System.out.println(received);
+                }
 
             }
 

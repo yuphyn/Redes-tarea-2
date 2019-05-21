@@ -117,7 +117,6 @@ class ClientHandler extends Thread
                                 if(!f.exists()){
                                     FLAG=0;
                                 }
-                                System.out.println(line);
                                 while (line != null) {
                                     line = br.readLine();
                                     if (line != null) {
@@ -167,20 +166,27 @@ class ClientHandler extends Thread
                             }
                             br.close();
                             byte[] all = outputStream.toByteArray();
-                            int tamaño = all.length;
-                            out.writeUTF(comando[1]);
-                            out.writeInt(tamaño);
-                            out.write(all,0,tamaño);
-                            String ruta = "./src/cliente/" + comando[1];
+                            //int tamano = all.length;
+                            //out.writeUTF(comando[1]);
+                            //out.writeLong(tamano);
+                            //out.write(all,0,tamano);
+                            //System.out.println(in.readUTF());
+                            String ruta = "./src/cliente/"+ comando[1];
                             try (FileOutputStream fos = new FileOutputStream(ruta)) {
                                 fos.write(all);
                                 //fos.close(); There is no more need for this line since you had created the instance of "fos" inside the try. And this will automatically close the OutputStream
                             }
+                            out.writeUTF("Servidor termino el get");
+                            break;
+
 
                         }
                         else{
                             System.out.println("El archivo no se encuentra en el servidor");
                         }
+
+                        break;
+
                     case "put":
                         System.out.println("Ejecutando put");
                         int id=1;
@@ -189,12 +195,9 @@ class ClientHandler extends Thread
                         byte[] temp = new byte[47000];
                         long tamanoTotalL = in.readLong();
                         int tamanoTotal = (int) tamanoTotalL;
-                        System.out.println("total: "+tamanoTotal);
                         PrintWriter writer = new PrintWriter("./src/servidor/"+comando[1]+".txt", "UTF-8");
                         while (tamanoTotal>0 && in.read(temp,0,Math.min(47000,tamanoTotal)) > 0){
-                            System.out.println("el id es: "+ id);
                             String byte64 = new sun.misc.BASE64Encoder().encode(temp);
-                            System.out.println(byte64.length());
                             tamanoTotal-=47000;
                             String ruta = "./src/maquina virtual " + maquinaVirtual + "/" + comando[1] + " parte " + id + ".txt";
                             FileWriter fichero = new FileWriter(ruta);
@@ -209,7 +212,6 @@ class ClientHandler extends Thread
                             id+=1;
                         }
                         writer.close();
-                        System.out.println("sali del while");
                         out.writeUTF("servidor envio archivo a maquinas virtuales");
                         break;
 
