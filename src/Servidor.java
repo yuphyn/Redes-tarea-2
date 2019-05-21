@@ -7,6 +7,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.net.*;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Scanner;
 
 
@@ -27,6 +29,15 @@ public class Servidor {
             {
                 // socket object to receive incoming client requests
                 s = ss.accept();
+
+                String timeStamp = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(Calendar.getInstance().getTime());
+                try {
+                    PrintWriter txt = new PrintWriter(new BufferedWriter(new FileWriter("./src/servidor/log.txt", true)));
+                    txt.println(timeStamp+"     connection  "+ s.getRemoteSocketAddress().toString()+"     conección entrante");
+                    txt.close();
+                } catch (IOException e) {
+                    //exception handling left as an exercise for the reader
+                }
 
                 System.out.println("Se conectó un nuevo cliente : " + s);
 
@@ -105,6 +116,14 @@ class ClientHandler extends Thread
                 }
                 switch (comando[0]) {
                     case "ls":
+                        String timeStamp = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(Calendar.getInstance().getTime());
+                        try {
+                            PrintWriter txt = new PrintWriter(new BufferedWriter(new FileWriter("./src/servidor/log.txt", true)));
+                            txt.println(timeStamp+"     command     "+s.getRemoteSocketAddress().toString()+"     ls");
+                            txt.close();
+                        } catch (IOException e) {
+                            //exception handling left as an exercise for the reader
+                        }
                         Path dir = Paths.get("./src/servidor");
                         System.out.println("entre a ls");
                         StringBuilder names = new StringBuilder();
@@ -138,6 +157,14 @@ class ClientHandler extends Thread
                         break;
 
                     case "get":
+                        String timeStamp2 = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(Calendar.getInstance().getTime());
+                        try {
+                            PrintWriter txt2 = new PrintWriter(new BufferedWriter(new FileWriter("./src/servidor/log.txt", true)));
+                            txt2.println(timeStamp2+"     command     "+s.getRemoteSocketAddress().toString()+"     get "+comando[1]);
+                            txt2.close();
+                        } catch (IOException e) {
+                            //exception handling left as an exercise for the reader
+                        }
                         System.out.println("Ejecutando get");
                         String path_to_get = "./src/servidor/"+comando[1]+".txt";
                         File file_to_get = new File(path_to_get);
@@ -188,6 +215,14 @@ class ClientHandler extends Thread
                         break;
 
                     case "put":
+                        String timeStamp3 = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(Calendar.getInstance().getTime());
+                        try {
+                            PrintWriter txt3 = new PrintWriter(new BufferedWriter(new FileWriter("./src/servidor/log.txt", true)));
+                            txt3.println(timeStamp3+"     command     "+s.getRemoteSocketAddress().toString()+"     put "+comando[1]);
+                            txt3.close();
+                        } catch (IOException e) {
+                            //exception handling left as an exercise for the reader
+                        }
                         System.out.println("Ejecutando put");
                         int id=1;
                         int totalMaquinas=2;
@@ -216,6 +251,14 @@ class ClientHandler extends Thread
                         break;
 
                     case "delete":
+                        String timeStamp4 = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(Calendar.getInstance().getTime());
+                        try {
+                            PrintWriter txt4 = new PrintWriter(new BufferedWriter(new FileWriter("./src/servidor/log.txt", true)));
+                            txt4.println(timeStamp4+"     command     "+s.getRemoteSocketAddress().toString()+"     delete "+comando[1]);
+                            txt4.close();
+                        } catch (IOException e) {
+                            //exception handling left as an exercise for the reader
+                        }
                         String path_to_remove = "./src/servidor/"+comando[1]+".txt";
                         File file = new File(path_to_remove);
                         if(file.exists())
